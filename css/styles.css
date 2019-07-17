@@ -6,16 +6,24 @@ body {
   flex-direction: column;
 }
 
-header {
+nav {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
 a {
   color: #69696a;
   text-decoration: none;
-  padding: 5px 0;
 }
 
 #logo {
@@ -42,7 +50,7 @@ h1 {
 }
 
 span {
-  border-left: 3px solid #69696a;
+  border-left: 3px solid #0b0b11;
 }
 
 p {
@@ -52,4 +60,64 @@ p {
 
 #scroll {
   margin: 25px 0;
+}
+
+/* ---------------- Desktop Styling Below --------------------- */
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    height: 100vh;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100px;
+    align-items: baseline;
+    /* justify-content: space-between; */
+  }
+
+  main {
+    flex: 10;
+  }
+
+  span {
+    width: 50%;
+  }
+
+  #scroll-bottom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  #scroll {
+    width: 120px;
+  }
+
+  #logo {
+    flex: 1;
+  }
+
+  ul {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+  }
+
+  #hire {
+    width: 90px;
+  }
+
+  .nav-item {
+    display: inline-block;
+    padding: 5px 5px;
+  }
+
+  button {
+    width: auto;
+  }
 }
